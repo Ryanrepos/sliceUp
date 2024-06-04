@@ -1,11 +1,7 @@
-console.log("natija");
+// Architectural pattern - MVC, Dependency Injection, MVP
+// Butun proyektni suyagi
 
 
 
-import moment from "moment";
-
-const currentTime = moment().format("YYYY MM DD");
-console.log(currentTime);
-
-const person: string = "Ryan";
-const count: number = 100;
+// Desing pattern - Middleware, decorator
+// Prooyektning bir bo'lagining suyagi: masalan qo'ligi
