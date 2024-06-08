@@ -29,3 +29,13 @@ console.log(myDemo("123MIT456"));
 
 // RUN: npm run train 
 
+/*
+Project Standarts
+    - Logging Standarts    
+    - Naming Standarts
+        function, method, variable =>  CAMEL   goHome
+        class =>                       PASCAL  MemberService
+        folder =>                      KEBAB
+        css =>                         SNAKE   button_style
+    - Error handling
+*/
