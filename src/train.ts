@@ -35,7 +35,7 @@ Project Standarts
     - Naming Standarts
         function, method, variable =>  CAMEL   goHome
         class =>                       PASCAL  MemberService
-        folder =>                      KEBAB
+        folder, file =>                KEBAB   kebab-case
         css =>                         SNAKE   button_style
     - Error handling
 */
