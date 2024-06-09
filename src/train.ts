@@ -39,3 +39,9 @@ Project Standarts
         css =>                         SNAKE   button_style
     - Error handling
 */
+
+/*
+Traditional Api
+Rest Api
+GraphQL Api 
+*/

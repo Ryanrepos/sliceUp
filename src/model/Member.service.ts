@@ -6,6 +6,11 @@ class MemberService {
     constructor(){
 
     }
+
+    public async processSignup(): Promise<void>{
+        console.log("Passed here");
+        
+    }
 }
 
 export default MemberService;
