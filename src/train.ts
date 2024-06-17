@@ -1,3 +1,32 @@
+//📌📌📌📌📌📌📌📌📌📌📌
+
+/*
+Project Standarts
+    - Logging Standarts    
+    - Naming Standarts
+        function, method, variable =>  CAMEL   goHome
+        class =>                       PASCAL  MemberService
+        folder, file =>                KEBAB   kebab-case
+        css =>                         SNAKE   button_style
+    - Error handling
+*/
+
+//📌📌📌📌📌📌📌📌📌📌📌
+
+/*
+Traditional Api
+Rest Api
+GraphQL Api 
+*/
+
+//📌📌📌📌📌📌📌📌📌📌📌
+
+// Frontend qurish usullari 2 xil:
+// 1. Traditional FD   =>  SSR  =>  EJS
+// 2. Modern FD        =>  SPA   =>  REACT
+
+//📌📌📌📌📌📌📌📌📌📌📌
+
 // function getPositiveNumbers(a: number[]): string {
 //     const result: number[] = [];
 //     for(const i of a) {
@@ -28,23 +57,6 @@
 // console.log(myDemo("123MIT456"));
 
 // RUN: npm run train 
-
-/*
-Project Standarts
-    - Logging Standarts    
-    - Naming Standarts
-        function, method, variable =>  CAMEL   goHome
-        class =>                       PASCAL  MemberService
-        folder, file =>                KEBAB   kebab-case
-        css =>                         SNAKE   button_style
-    - Error handling
-*/
-
-/*
-Traditional Api
-Rest Api
-GraphQL Api 
-*/
 
 // I-TASK:
 
