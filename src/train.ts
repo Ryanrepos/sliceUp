@@ -60,28 +60,37 @@ GraphQL Api
 
 // I-TASK:
 
-function takrorElement(array: number[]): number | null {
-    const count = new Map<number, number>();
+// function takrorElement(array: number[]): number | null {
+//     const count = new Map<number, number>();
 
-    for (let i = 0; i < array.length; i++) {
-        const num = array[i];
-        count.set(num, (count.get(num) || 0) + 1);
-    }
+//     for (let i = 0; i < array.length; i++) {
+//         const num = array[i];
+//         count.set(num, (count.get(num) || 0) + 1);
+//     }
 
-    let repeatedEl: number | null = null;
-    let maxCount = 0;
+//     let repeatedEl: number | null = null;
+//     let maxCount = 0;
 
-    count.forEach((a, b) => {
-        if (a > maxCount) {
-            maxCount = a;
-            repeatedEl = b;
-        }
-    });
+//     count.forEach((a, b) => {
+//         if (a > maxCount) {
+//             maxCount = a;
+//             repeatedEl = b;
+//         }
+//     });
 
-    return repeatedEl;
-}
+//     return repeatedEl;
+// }
 
-console.log(takrorElement([1, 2, 3, 4, 3, 4, 3, 5, 5, 5, 5])); // buyerda 5 qaytaradi sababi, eng kopligi uchun
-console.log(takrorElement([100, 200, 300, 200]));    // bunda bosa 200 ni qaytaryabdi
+// console.log(takrorElement([1, 2, 3, 4, 3, 4, 3, 5, 5, 5, 5])); // buyerda 5 qaytaradi sababi, eng kopligi uchun
+// console.log(takrorElement([100, 200, 300, 200]));    // bunda bosa 200 ni qaytaryabdi
 
 // RUN: npm run train
+
+// J - TASK
+
+function longestWord(word: string): string {
+    return word.split(' ').sort((a, b) => b.length - a.length)[0];
+}
+
+// Example usage:
+console.log(longestWord("Life is good with so much power")); 
