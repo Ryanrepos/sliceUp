@@ -18,6 +18,7 @@ export enum Message {
     USED_NICK_PHONE = "You're inserting already used nick or phone!",
     NO_MEMBER_NICK = "No member with that member nick!",
     WRONG_PASSWORD = "Wrong password, please try again!",
+    NOT_AUTHENTICATED = "Not authenticated, please login first!"
 }
 
 class Errors extends Error {
@@ -29,7 +30,7 @@ class Errors extends Error {
         message: Message.SOMETHING_WENT_WRONG,
     };
 
-    constructor(statusCode: HttpCode, statusMessage: Message){
+    constructor(statusCode: HttpCode, statusMessage: Message) {
         super();
         this.code = statusCode;
         this.message = statusMessage;
