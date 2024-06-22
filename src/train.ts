@@ -95,9 +95,27 @@ GraphQL Api
 
 // J - TASK
 
-function longestWord(word: string): string {
-    return word.split(' ').sort((a, b) => b.length - a.length)[0];
+// function longestWord(word: string): string {
+//     return word.split(' ').sort((a, b) => b.length - a.length)[0];
+// }
+
+// // Example usage:
+// console.log(longestWord("Life is good with so much power"));
+
+
+// K - TASK
+
+function unlilar(input: string): number {
+    const unliTovush = "aeiouAEIOU";
+
+    return input.split('').reduce((count, char) => {
+        if (unliTovush.includes(char)) {
+            count++;
+        }
+        return count;
+    }, 0);
 }
 
-// Example usage:
-console.log(longestWord("Life is good with so much power")); 
+// Test the function
+console.log(unlilar("booking")); // 3 ta unli
+console.log(unlilar("fullstackDeveloper")); // 6 ta unli
