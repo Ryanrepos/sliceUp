@@ -27,6 +27,13 @@ GraphQL Api
 
 //📌📌📌📌📌📌📌📌📌📌📌
 
+// Cookie husisyatlari:
+
+// 1. request join
+// 2. self destroy
+
+//📌📌📌📌📌📌📌📌📌📌📌
+
 // function getPositiveNumbers(a: number[]): string {
 //     const result: number[] = [];
 //     for(const i of a) {

@@ -5,7 +5,7 @@ import { T } from "../libs/types/common";
 import MemberService from "../model/Member.service";    // Model logikasi
 import { AdminRequest, LoginInput, MemberInput } from "../libs/types/member";
 import { MemberType } from "../libs/enums/member.enum";
-import { Message } from "../libs/Errors";
+import Errors, { Message } from "../libs/Errors";
 
 const restaurantController: T = {};
 restaurantController.goHome = (req: Request, res: Response) => {
@@ -16,7 +16,9 @@ restaurantController.goHome = (req: Request, res: Response) => {
         // Respond turlari:
         // send | json | redirect | end | render
     } catch (err) {
-        console.log("Error, goHome:", err)
+        console.log("Error, goHome:", err);
+        res.redirect("/admin")
+
     }
 };
 
@@ -26,7 +28,9 @@ restaurantController.getSingup = (req: Request, res: Response) => {
         console.log("signup");
         res.render("signup");
     } catch (err) {
-        console.log("Error, getSignup:", err)
+        console.log("Error, getSignup:", err);
+        res.redirect("/admin")
+
     }
 };
 
@@ -36,7 +40,8 @@ restaurantController.getLogin = (req: Request, res: Response) => {
         console.log("login");
         res.render("login");
     } catch (err) {
-        console.log("Error, getLogin:", err)
+        console.log("Error, getLogin:", err);
+        res.redirect("/admin")
     }
 };
 
@@ -57,7 +62,8 @@ restaurantController.processSignup = async (req: AdminRequest, res: Response) =>
 
     } catch (err) {
         console.log("Error, processSignup:", err);
-        res.send(err);
+        const message = err instanceof Errors ? err.message : Message.SOMETHING_WENT_WRONG;
+        res.send(`<script> alert(${message}"); window.location.replace("admin/signup") </script>`);
     }
 };
 
@@ -78,7 +84,25 @@ restaurantController.processLogin = async (req: AdminRequest, res: Response) => 
 
     } catch (err) {
         console.log("Error, processLogin:", err)
+        const message = err instanceof Errors ? err.message : Message.SOMETHING_WENT_WRONG;
+        res.send(`<script> alert(${message}"); window.location.replace("admin/login") </script>`);
         res.send(err);
+    }
+};
+
+restaurantController.logout = async (req: AdminRequest, res: Response) => {
+
+    try {
+        console.log("logout");
+
+        req.session.destroy(function () {
+            res.redirect("/admin")
+        });
+
+    } catch (err) {
+        console.log("Error, processLogin:", err)
+        res.redirect("/admin")
+
     }
 };
 
