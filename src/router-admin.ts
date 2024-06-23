@@ -3,6 +3,7 @@ import express from "express";
 const routerAdmin = express.Router();
 
 import restaurantController from "./controller/restaurant.controller";
+import productController from "./controller/product.controller";
 
 // ** RESTAURANT **
 
@@ -23,6 +24,12 @@ routerAdmin.get("/check-me", restaurantController.checkAuthSession);
 
 
 // ** PRODUCT **
+
+routerAdmin.get("/product/all", productController.getAllProducts);
+
+routerAdmin.post("/product/create", productController.createNewProduct);
+
+routerAdmin.post("/product/:id", productController.updateChosenProduct);
 
 // ** USER **
 
