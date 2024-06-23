@@ -105,17 +105,29 @@ GraphQL Api
 
 // K - TASK
 
-function unlilar(input: string): number {
-    const unliTovush = "aeiouAEIOU";
+// function unlilar(input: string): number {
+//     const unliTovush = "aeiouAEIOU";
 
-    return input.split('').reduce((count, char) => {
-        if (unliTovush.includes(char)) {
-            count++;
-        }
-        return count;
-    }, 0);
+//     return input.split('').reduce((count, char) => {
+//         if (unliTovush.includes(char)) {
+//             count++;
+//         }
+//         return count;
+//     }, 0);
+// }
+
+// // Test the function
+// console.log(unlilar("booking")); // 3 ta unli
+// console.log(unlilar("fullstackDeveloper")); // 6 ta unli
+
+// L - TASK
+
+function reverseSentence(input: string): string {
+    return input
+        .split(' ')
+        .map(word => word.split('').reverse().join(''))
+        .join(' ');
 }
 
-// Test the function
-console.log(unlilar("booking")); // 3 ta unli
-console.log(unlilar("fullstackDeveloper")); // 6 ta unli
+console.log(reverseSentence("reverse train.js file"));
+
