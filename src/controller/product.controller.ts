@@ -24,6 +24,7 @@ productController.createNewProduct = async (req: Request, res: Response) => {
 
     try {
         console.log("createNewProduct");
+        res.send("DONE!");
 
     } catch (err) {
         console.log("Error, createNewProduct", err);
