@@ -34,6 +34,14 @@ GraphQL Api
 
 //📌📌📌📌📌📌📌📌📌📌📌
 
+// Validations:
+
+// 1. Frontend validation
+// 2. Backend validation
+// 3. Database validation
+
+//📌📌📌📌📌📌📌📌📌📌📌
+
 // function getPositiveNumbers(a: number[]): string {
 //     const result: number[] = [];
 //     for(const i of a) {
