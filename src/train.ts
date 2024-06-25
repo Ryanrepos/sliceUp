@@ -130,12 +130,23 @@ GraphQL Api
 
 // L - TASK
 
-function reverseSentence(input: string): string {
-    return input
-        .split(' ')
-        .map(word => word.split('').reverse().join(''))
-        .join(' ');
+// function reverseSentence(input: string): string {
+//     return input
+//         .split(' ')
+//         .map(word => word.split('').reverse().join(''))
+//         .join(' ');
+// }
+
+// console.log(reverseSentence("reverse train.js file"));
+
+// M - TASK
+
+function kvadrat(numbers: number[]) {
+    return numbers.map(num => ({ number: num, square: num * num }));
 }
 
-console.log(reverseSentence("reverse train.js file"));
+// Example usage:
+const result = kvadrat([4, 5, 6]);
+console.log(result);     // 16, 25, 36 natijamiz
+
 
