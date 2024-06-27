@@ -42,6 +42,16 @@ GraphQL Api
 
 //📌📌📌📌📌📌📌📌📌📌📌
 
+
+// CSS Animation Sources:
+
+// 1. AnimeJs.com
+// 2. PixiJs.com
+// 3. SpriteJs.com
+// 4. ThreeJs.com
+
+//📌📌📌📌📌📌📌📌📌📌📌
+
 // function getPositiveNumbers(a: number[]): string {
 //     const result: number[] = [];
 //     for(const i of a) {
