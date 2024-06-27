@@ -42,7 +42,6 @@ GraphQL Api
 
 //📌📌📌📌📌📌📌📌📌📌📌
 
-
 // CSS Animation Sources:
 
 // 1. AnimeJs.com
