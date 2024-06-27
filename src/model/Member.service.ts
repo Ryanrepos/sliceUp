@@ -1,5 +1,5 @@
 
-// Modellar controller lar bilan to'gridan to'gri ishlaydi ekan
+// Modellar controller lar bilan to'gridan to'gri ishlaydi 
 // Modellar database bilan schema modellar orqali bog'lanadi va amallar bajaradi ekan.
 
 import MemberModel from "../schema/Member.model";

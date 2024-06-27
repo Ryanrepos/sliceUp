@@ -6,6 +6,7 @@ import MemberService from "../model/Member.service";    // Model logikasi
 import { AdminRequest, LoginInput, MemberInput } from "../libs/types/member";
 import { MemberType } from "../libs/enums/member.enum";
 import Errors, { HttpCode, Message } from "../libs/Errors";
+const memberService = new MemberService();
 
 const restaurantController: T = {};
 restaurantController.goHome = (req: Request, res: Response) => {
@@ -57,7 +58,6 @@ restaurantController.processSignup = async (req: AdminRequest, res: Response) =>
         const newMember: MemberInput = req.body;
         newMember.memberImage = file?.path;
         newMember.memberType = MemberType.RESTAURANT;
-        const memberService = new MemberService();
         const result = await memberService.processSignup(newMember);
         // SESSIONS AUTHENTICATION
 
@@ -69,7 +69,7 @@ restaurantController.processSignup = async (req: AdminRequest, res: Response) =>
     } catch (err) {
         console.log("Error, processSignup:", err);
         const message = err instanceof Errors ? err.message : Message.SOMETHING_WENT_WRONG;
-        res.send(`<script> alert("${message}"); window.location.replace("admin/signup") </script>`);
+        res.send(`<script> alert("${message}"); window.location.replace("/admin/signup") </script>`);
     }
 };
 
@@ -77,9 +77,9 @@ restaurantController.processLogin = async (req: AdminRequest, res: Response) => 
 
     try {
         console.log("processLogin");
-        console.log("body:", req.body);
+        console.log("req.body:", req.body);
+
         const input: LoginInput = req.body;
-        const memberService = new MemberService();
         const result = await memberService.processLogin(input);
         // SESSIONS AUTHENTICATION
 
@@ -91,7 +91,7 @@ restaurantController.processLogin = async (req: AdminRequest, res: Response) => 
     } catch (err) {
         console.log("Error, processLogin:", err)
         const message = err instanceof Errors ? err.message : Message.SOMETHING_WENT_WRONG;
-        res.send(`<script> alert("${message}"); window.location.replace("admin/login") </script>`);
+        res.send(`<script> alert("${message}"); window.location.replace("/admin/login") </script>`);
     }
 };
 
@@ -116,7 +116,6 @@ restaurantController.getUsers = async (req: Request, res: Response) => {
     try {
         console.log("getUsers");
         // instance from MemberService..
-        const memberService = new MemberService();
         const result = await memberService.getUsers()
         console.log("result:", result);
 
@@ -131,7 +130,6 @@ restaurantController.updateChosenUser = async (req: Request, res: Response) => {
 
     try {
         console.log("updateChosenUser");
-        const memberService = new MemberService();
         const result = await memberService.updateChosenUser(req.body);
 
         res.status(HttpCode.OK).json({ data: result });
