@@ -148,5 +148,3 @@ function kvadrat(numbers: number[]) {
 // Example usage:
 const result = kvadrat([4, 5, 6]);
 console.log(result);     // 16, 25, 36 natijamiz
-
-
