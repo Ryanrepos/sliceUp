@@ -2,7 +2,7 @@
 
 /*
 Project Standarts
-    - Logging Standarts    
+    - Logging Standarts
     - Naming Standarts
         function, method, variable =>  CAMEL   goHome
         class =>                       PASCAL  MemberService
@@ -16,7 +16,7 @@ Project Standarts
 /*
 Traditional Api
 Rest Api
-GraphQL Api 
+GraphQL Api
 */
 
 //📌📌📌📌📌📌📌📌📌📌📌
@@ -65,7 +65,7 @@ GraphQL Api
 
 // RUN: npm run train
 
-// *** H2 - TASK ***
+// *** H2 - TASK *** 🌻
 
 // function myDemo(str: string): string {
 //     let strResult = "";
@@ -82,7 +82,7 @@ GraphQL Api
 
 // RUN: npm run train 
 
-// I-TASK:
+// I-TASK: 🌻
 
 // function takrorElement(array: number[]): number | null {
 //     const count = new Map<number, number>();
@@ -110,7 +110,7 @@ GraphQL Api
 
 // RUN: npm run train
 
-// J - TASK
+// J - TASK 🌻
 
 // function longestWord(word: string): string {
 //     return word.split(' ').sort((a, b) => b.length - a.length)[0];
@@ -120,7 +120,7 @@ GraphQL Api
 // console.log(longestWord("Life is good with so much power"));
 
 
-// K - TASK
+// K - TASK 🌻
 
 // function unlilar(input: string): number {
 //     const unliTovush = "aeiouAEIOU";
@@ -137,7 +137,7 @@ GraphQL Api
 // console.log(unlilar("booking")); // 3 ta unli
 // console.log(unlilar("fullstackDeveloper")); // 6 ta unli
 
-// L - TASK
+// L - TASK 🌻
 
 // function reverseSentence(input: string): string {
 //     return input
@@ -148,12 +148,29 @@ GraphQL Api
 
 // console.log(reverseSentence("reverse train.js file"));
 
-// M - TASK
+// M - TASK 🌻
 
-function kvadrat(numbers: number[]) {
-    return numbers.map(num => ({ number: num, square: num * num }));
+// function kvadrat(numbers: number[]) {
+//     return numbers.map(num => ({ number: num, square: num * num }));
+// }
+
+// // Example usage:
+// const result = kvadrat([4, 5, 6]);
+// console.log(result);     // 16, 25, 36 natijamiz
+
+// N - TASK 🌻
+
+function change(string: string) {
+
+    const result = string.split("").reverse().join("")
+
+    const palindromeCheck = string == result;
+
+    return palindromeCheck;
+
 }
 
-// Example usage:
-const result = kvadrat([4, 5, 6]);
-console.log(result);     // 16, 25, 36 natijamiz
+console.log(change("book")); // false natija
+console.log(change("Ryan"));    // false buyam
+console.log(change("111"));  // true buyerda
+
