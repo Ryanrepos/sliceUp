@@ -160,17 +160,32 @@ GraphQL Api
 
 // N - TASK 🌻
 
-function change(string: string) {
+// function change(string: string) {
 
-    const result = string.split("").reverse().join("")
+//     const result = string.split("").reverse().join("")
 
-    const palindromeCheck = string == result;
+//     const palindromeCheck = string == result;
 
-    return palindromeCheck;
+//     return palindromeCheck;
 
+// }
+
+// console.log(change("book")); // false natija
+// console.log(change("Ryan"));    // false buyam
+// console.log(change("111"));  // true buyerda
+
+// O - TASK
+
+function sum(arr: any[]): number {
+    let total = 0;
+    for (const i of arr) {
+        if (typeof i === 'number') {
+            total += i;
+        }
+    }
+    return total;
 }
 
-console.log(change("book")); // false natija
-console.log(change("Ryan"));    // false buyam
-console.log(change("111"));  // true buyerda
+console.log(sum([5, "50", { son: 10 }, true, 22])); // buyerda 27 qaytyabdi..
+
 
