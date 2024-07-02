@@ -38,7 +38,6 @@ $(function () {
             console.log("response:", response);
             const result = response.data;
             if (result.data) {
-                console.log("product updated");
                 $(".new-product-status").blur();
             } else alert("Product update failed!");
 
