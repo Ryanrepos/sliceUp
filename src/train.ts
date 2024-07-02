@@ -176,16 +176,29 @@ GraphQL Api
 
 // O - TASK
 
-function sum(arr: any[]): number {
-    let total = 0;
-    for (const i of arr) {
-        if (typeof i === 'number') {
-            total += i;
+// function sum(arr: any[]): number {
+//     let total = 0;
+//     for (const i of arr) {
+//         if (typeof i === 'number') {
+//             total += i;
+//         }
+//     }
+//     return total;
+// }
+
+// console.log(sum([5, "50", { son: 10 }, true, 22])); // buyerda 27 qaytyabdi..
+
+// P - TASK
+
+function objArr(obj: { [key: string]: any }): [string, any][] {
+    const result: [string, any][] = [];
+    for (const key in obj) {
+        if (obj.hasOwnProperty(key)) {
+            result.push([key, obj[key]]);
         }
     }
-    return total;
+    return result;
 }
 
-console.log(sum([5, "50", { son: 10 }, true, 22])); // buyerda 27 qaytyabdi..
-
-
+const result = objArr({ a: 10, b: 20 });
+console.log(result); 
