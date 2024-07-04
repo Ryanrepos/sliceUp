@@ -60,25 +60,35 @@ function validateForm() {
     const productStatus = $(".product-status").val();
 
 
-    if (productName === "" || productPrice === "" || productLeftCount === "" || productCollection === "" || productDesc === "" || productStatus === "") {
+    if (productName === "" || 
+    productPrice === "" || 
+    productLeftCount === "" || 
+    productCollection === "" || 
+    productDesc === "" || 
+    productStatus === "") {
         alert("Please, insert all details!");
         return false;
     } else return true;
 
 }
 
+
 function previewFileHandler(input, order) {
     const imgClassName = input.className;
     console.log("input:", input);
 
+    // Selecting the file
     const file = $(`.${imgClassName}`).get(0).files[0];
 
+    // Checking file type
     const fileType = file["type"];
     const validImageType = ["image/jpg", "image/jpeg", "image/png"];
 
+    // Validating file type
     if (!validImageType.includes(fileType)) {
         alert("Please, insert only jpg, jpeg and png!")
     } else {
+        // Reading the file
         if (file) {
             const reader = new FileReader();
             reader.onload = function () {
