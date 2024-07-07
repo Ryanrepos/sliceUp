@@ -190,15 +190,25 @@ GraphQL Api
 
 // P - TASK
 
-function objArr(obj: { [key: string]: any }): [string, any][] {
-    const result: [string, any][] = [];
-    for (const key in obj) {
-        if (obj.hasOwnProperty(key)) {
-            result.push([key, obj[key]]);
-        }
-    }
-    return result;
+// function objArr(obj: { [key: string]: any }): [string, any][] {
+//     const result: [string, any][] = [];
+//     for (const key in obj) {
+//         if (obj.hasOwnProperty(key)) {
+//             result.push([key, obj[key]]);
+//         }
+//     }
+//     return result;
+// }
+
+// const result = objArr({ a: 10, b: 20 });
+// console.log(result); 
+
+// Q - TASK
+
+function hasProperty(obj: object, prop: string): boolean {
+    return prop in obj;
 }
 
-const result = objArr({ a: 10, b: 20 });
-console.log(result); 
+console.log(hasProperty({ brand: "Sony", model: "Xperia" }, "brand")); // returns true
+console.log(hasProperty({ brand: "Sony", model: "Xperia" }, "price"));  // returns false
+
