@@ -205,10 +205,29 @@ GraphQL Api
 
 // Q - TASK
 
-function hasProperty(obj: object, prop: string): boolean {
-    return prop in obj;
+// function hasProperty(obj: object, prop: string): boolean {
+//     return prop in obj;
+// }
+
+// console.log(hasProperty({ brand: "Sony", model: "Xperia" }, "brand")); // returns true
+// console.log(hasProperty({ brand: "Sony", model: "Xperia" }, "price"));  // returns false
+
+// R - TASK
+
+function calculate(exp: string): number {
+    const numbers = exp.match(/\d+/g);
+
+    if (!numbers) {
+        return NaN;
+    }
+
+    const numArray = numbers.map(Number);
+
+    const sum = numArray.reduce((acc, curr) => acc + curr, 0);
+
+    return sum;
 }
 
-console.log(hasProperty({ brand: "Sony", model: "Xperia" }, "brand")); // returns true
-console.log(hasProperty({ brand: "Sony", model: "Xperia" }, "price"));  // returns false
-
+console.log(calculate("1+3")); // 4
+console.log(calculate("5+15")); // 20
+console.log(calculate("invalid")); // NaN
