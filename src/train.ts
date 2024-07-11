@@ -214,20 +214,33 @@ GraphQL Api
 
 // R - TASK
 
-function calculate(exp: string): number {
-    const numbers = exp.match(/\d+/g);
+// function calculate(exp: string): number {
+//     const numbers = exp.match(/\d+/g);
 
-    if (!numbers) {
-        return NaN;
-    }
+//     if (!numbers) {
+//         return NaN;
+//     }
 
-    const numArray = numbers.map(Number);
+//     const numArray = numbers.map(Number);
 
-    const sum = numArray.reduce((acc, curr) => acc + curr, 0);
+//     const sum = numArray.reduce((acc, curr) => acc + curr, 0);
 
-    return sum;
+//     return sum;
+// }
+
+// console.log(calculate("1+3")); // 4
+// console.log(calculate("5+15")); // 20
+// console.log(calculate("invalid")); // NaN
+
+
+// S - TASK
+
+function missingNumber(nums: number[]): number {
+    const n: number = nums.length;
+    const totalSum: number = (n * (n + 1)) / 2;
+    const arraySum: number = nums.reduce((acc, num) => acc + num, 0);
+    
+    return totalSum - arraySum;
 }
 
-console.log(calculate("1+3")); // 4
-console.log(calculate("5+15")); // 20
-console.log(calculate("invalid")); // NaN
+console.log(missingNumber([3, 0, 1])); // 2
