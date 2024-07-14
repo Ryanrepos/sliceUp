@@ -235,12 +235,48 @@ GraphQL Api
 
 // S - TASK
 
-function missingNumber(nums: number[]): number {
-    const n: number = nums.length;
-    const totalSum: number = (n * (n + 1)) / 2;
-    const arraySum: number = nums.reduce((acc, num) => acc + num, 0);
+// function missingNumber(nums: number[]): number {
+//     const n: number = nums.length;
+//     const totalSum: number = (n * (n + 1)) / 2;
+//     const arraySum: number = nums.reduce((acc, num) => acc + num, 0);
     
-    return totalSum - arraySum;
-}
+//     return totalSum - arraySum;
+// }
 
-console.log(missingNumber([3, 0, 1])); // 2
+// console.log(missingNumber([3, 0, 1])); // 2
+
+// T - TASK
+
+function mergeSortedArrays(arr1: number[], arr2: number[]): number[] {
+    const mergedArray: number[] = [];
+    let a = 0;
+    let b = 0;
+  
+    while (a < arr1.length && b < arr2.length) {
+      if (arr1[a] < arr2[b]) {
+        mergedArray.push(arr1[a]);
+        a++;
+      } else {
+        mergedArray.push(arr2[b]);
+        b++;
+      }
+    }
+  
+    while (a < arr1.length) {
+      mergedArray.push(arr1[a]);
+      a++;
+    }
+  
+    while (b < arr2.length) {
+      mergedArray.push(arr2[b]);
+      b++;
+    }
+  
+    return mergedArray;
+  }
+  
+  const array1 = [9, 0, 5];
+  const array2 = [1, 887, 901];
+  
+  console.log(mergeSortedArrays(array1, array2)); // qaytaryabdi -> [ 1, 9, 0, 5, 887, 901 ]
+  
