@@ -247,36 +247,53 @@ GraphQL Api
 
 // T - TASK
 
-function mergeSortedArrays(arr1: number[], arr2: number[]): number[] {
-    const mergedArray: number[] = [];
-    let a = 0;
-    let b = 0;
+// function mergeSortedArrays(arr1: number[], arr2: number[]): number[] {
+//     const mergedArray: number[] = [];
+//     let a = 0;
+//     let b = 0;
   
-    while (a < arr1.length && b < arr2.length) {
-      if (arr1[a] < arr2[b]) {
-        mergedArray.push(arr1[a]);
-        a++;
-      } else {
-        mergedArray.push(arr2[b]);
-        b++;
+//     while (a < arr1.length && b < arr2.length) {
+//       if (arr1[a] < arr2[b]) {
+//         mergedArray.push(arr1[a]);
+//         a++;
+//       } else {
+//         mergedArray.push(arr2[b]);
+//         b++;
+//       }
+//     }
+  
+//     while (a < arr1.length) {
+//       mergedArray.push(arr1[a]);
+//       a++;
+//     }
+  
+//     while (b < arr2.length) {
+//       mergedArray.push(arr2[b]);
+//       b++;
+//     }
+  
+//     return mergedArray;
+//   }
+  
+//   const array1 = [9, 0, 5];
+//   const array2 = [1, 887, 901];
+  
+//   console.log(mergeSortedArrays(array1, array2)); // qaytaryabdi -> [ 1, 9, 0, 5, 887, 901 ]
+  
+// U -TASK
+
+function odds(num: number): number {
+  let count = 0;
+  for (let i = 0; i < num; i++) {
+      if (i % 2 !== 0) {
+          count++;
       }
-    }
-  
-    while (a < arr1.length) {
-      mergedArray.push(arr1[a]);
-      a++;
-    }
-  
-    while (b < arr2.length) {
-      mergedArray.push(arr2[b]);
-      b++;
-    }
-  
-    return mergedArray;
   }
-  
-  const array1 = [9, 0, 5];
-  const array2 = [1, 887, 901];
-  
-  console.log(mergeSortedArrays(array1, array2)); // qaytaryabdi -> [ 1, 9, 0, 5, 887, 901 ]
-  
+  return count;
+}
+
+console.log(odds(5));  // 2
+console.log(odds(16)); // 8
+
+
+
