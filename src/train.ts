@@ -282,18 +282,45 @@ GraphQL Api
   
 // U -TASK
 
-function odds(num: number): number {
-  let count = 0;
-  for (let i = 0; i < num; i++) {
-      if (i % 2 !== 0) {
-          count++;
-      }
-  }
-  return count;
-}
+// function odds(num: number): number {
+//   let count = 0;
+//   for (let i = 0; i < num; i++) {
+//       if (i % 2 !== 0) {
+//           count++;
+//       }
+//   }
+//   return count;
+// }
 
-console.log(odds(5));  // 2
-console.log(odds(16)); // 8
+// console.log(odds(5));  // 2
+// console.log(odds(16)); // 8
+
+// W - TASK
+
+function chunk<T>(array: T[], capacity: number): T[][] {
+    const result: T[][] = [];
+    let index = 0;
+  
+    while (index < array.length) {
+      result.push(array.slice(index, index + capacity));
+      index += capacity;
+    }
+  
+    return result;
+  }
+  
+  // Example usage
+  const result = chunk([11, 22, 34, 58, 85, 81, 74, 90, 44, 92, 1000], 2);
+  console.log(result); 
+//   [
+//     [ 11, 22 ],
+//     [ 34, 58 ],
+//     [ 85, 81 ],
+//     [ 74, 90 ],
+//     [ 44, 92 ],
+//     [ 1000 ]
+//   ]
+  
 
 
 
