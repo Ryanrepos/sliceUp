@@ -4,10 +4,16 @@ const router = express.Router();
 
 import memberController from "./controller/member.controller";
 
-router.post("/login", memberController.login);
+// React App
 
-router.post("/Signup", memberController.signup);
+// Member 
+router.post("/member/login", memberController.login);
+router.post("/member/signup", memberController.signup);
+router.get("/member/detail", memberController.verifyAuth);
 
-// REACT loyiha uchun 
+// Product
+
+
+// Order
 
 export default router;
