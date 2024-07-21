@@ -15,10 +15,10 @@ const store = new MongoDBStore({
     collection: "sessions",
 });
 
-// ** 1 - ENTRANCE **
+// ** 1 - ENTRANCE ** => Folderlarni ochiqlash
 
 const app = express();
-
+// browserga public folder ni ochib beryabmiz.
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
