@@ -6,6 +6,7 @@ import uploader from "./libs/utilis/uploader";
 // React App
 
 // Member
+router.get("/member/restaurant", memberController.getRestaurant);
 router.post("/member/login", memberController.login);
 router.post("/member/signup", memberController.signup);
 router.post(
