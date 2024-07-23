@@ -61,7 +61,7 @@ GraphQL Api
 //     return result.join("")
 // }
 
-// console.log(getPositiveNumbers([1, 9, 5, -2, -8]));  // buyerda 195 raqamlarini qaytarib beryabdi. 
+// console.log(getPositiveNumbers([1, 9, 5, -2, -8]));  // buyerda 195 raqamlarini qaytarib beryabdi.
 
 // RUN: npm run train
 
@@ -80,7 +80,7 @@ GraphQL Api
 // console.log(myDemo("48gh9k2"));
 // console.log(myDemo("123MIT456"));
 
-// RUN: npm run train 
+// RUN: npm run train
 
 // I-TASK: 🌻
 
@@ -118,7 +118,6 @@ GraphQL Api
 
 // // Example usage:
 // console.log(longestWord("Life is good with so much power"));
-
 
 // K - TASK 🌻
 
@@ -201,7 +200,7 @@ GraphQL Api
 // }
 
 // const result = objArr({ a: 10, b: 20 });
-// console.log(result); 
+// console.log(result);
 
 // Q - TASK
 
@@ -232,14 +231,13 @@ GraphQL Api
 // console.log(calculate("5+15")); // 20
 // console.log(calculate("invalid")); // NaN
 
-
 // S - TASK
 
 // function missingNumber(nums: number[]): number {
 //     const n: number = nums.length;
 //     const totalSum: number = (n * (n + 1)) / 2;
 //     const arraySum: number = nums.reduce((acc, num) => acc + num, 0);
-    
+
 //     return totalSum - arraySum;
 // }
 
@@ -251,7 +249,7 @@ GraphQL Api
 //     const mergedArray: number[] = [];
 //     let a = 0;
 //     let b = 0;
-  
+
 //     while (a < arr1.length && b < arr2.length) {
 //       if (arr1[a] < arr2[b]) {
 //         mergedArray.push(arr1[a]);
@@ -261,25 +259,25 @@ GraphQL Api
 //         b++;
 //       }
 //     }
-  
+
 //     while (a < arr1.length) {
 //       mergedArray.push(arr1[a]);
 //       a++;
 //     }
-  
+
 //     while (b < arr2.length) {
 //       mergedArray.push(arr2[b]);
 //       b++;
 //     }
-  
+
 //     return mergedArray;
 //   }
-  
+
 //   const array1 = [9, 0, 5];
 //   const array2 = [1, 887, 901];
-  
+
 //   console.log(mergeSortedArrays(array1, array2)); // qaytaryabdi -> [ 1, 9, 0, 5, 887, 901 ]
-  
+
 // U -TASK
 
 // function odds(num: number): number {
@@ -297,21 +295,21 @@ GraphQL Api
 
 // W - TASK
 
-function chunk<T>(array: T[], capacity: number): T[][] {
-    const result: T[][] = [];
-    let index = 0;
-  
-    while (index < array.length) {
-      result.push(array.slice(index, index + capacity));
-      index += capacity;
-    }
-  
-    return result;
-  }
-  
-  // Example usage
-  const result = chunk([11, 22, 34, 58, 85, 81, 74, 90, 44, 92, 1000], 2);
-  console.log(result); 
+// function chunk<T>(array: T[], capacity: number): T[][] {
+//     const result: T[][] = [];
+//     let index = 0;
+
+//     while (index < array.length) {
+//       result.push(array.slice(index, index + capacity));
+//       index += capacity;
+//     }
+
+//     return result;
+//   }
+
+//   // Example usage
+//   const result = chunk([11, 22, 34, 58, 85, 81, 74, 90, 44, 92, 1000], 2);
+//   console.log(result);
 //   [
 //     [ 11, 22 ],
 //     [ 34, 58 ],
@@ -320,7 +318,28 @@ function chunk<T>(array: T[], capacity: number): T[][] {
 //     [ 44, 92 ],
 //     [ 1000 ]
 //   ]
-  
 
+// X - TASK
 
+function cases(obj: any, keyToFind: string): number {
+  if (typeof obj !== "object" || obj === null) return 0;
 
+  return Object.entries(obj).reduce((count, [key, value]) => {
+    const currentCount = key === keyToFind ? 1 : 0;
+    return (
+      count +
+      currentCount +
+      (typeof value === "object" ? cases(value, keyToFind) : 0)
+    );
+  }, 0);
+}
+
+// Example usage:
+const result = cases(
+  {
+    model: "Continental GT",
+    steer: { model: "HANKOOK", size: 30 },
+  },
+  "model"
+);
+console.log(result); // 2
