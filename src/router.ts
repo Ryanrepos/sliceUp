@@ -2,6 +2,7 @@ import express from "express";
 const router = express.Router();
 import memberController from "./controller/member.controller";
 import uploader from "./libs/utilis/uploader";
+import productController from "./controller/product.controller";
 
 // React App
 
@@ -29,6 +30,8 @@ router.post(
 router.get("/member/top-users", memberController.getTopUsers);
 
 // Product
+
+router.get("/product/all", productController.getProducts);
 
 // Order
 
