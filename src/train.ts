@@ -321,25 +321,37 @@ GraphQL Api
 
 // X - TASK
 
-function cases(obj: any, keyToFind: string): number {
-  if (typeof obj !== "object" || obj === null) return 0;
+// function cases(obj: any, keyToFind: string): number {
+//   if (typeof obj !== "object" || obj === null) return 0;
 
-  return Object.entries(obj).reduce((count, [key, value]) => {
-    const currentCount = key === keyToFind ? 1 : 0;
-    return (
-      count +
-      currentCount +
-      (typeof value === "object" ? cases(value, keyToFind) : 0)
-    );
-  }, 0);
+//   return Object.entries(obj).reduce((count, [key, value]) => {
+//     const currentCount = key === keyToFind ? 1 : 0;
+//     return (
+//       count +
+//       currentCount +
+//       (typeof value === "object" ? cases(value, keyToFind) : 0)
+//     );
+//   }, 0);
+// }
+
+// // Example usage:
+// const result = cases(
+//   {
+//     model: "Continental GT",
+//     steer: { model: "HANKOOK", size: 30 },
+//   },
+//   "model"
+// );
+// console.log(result); // 2
+
+// Y - TASK
+
+function unique(arr1: number[], arr2: number[]): number[] {
+  return arr1.filter((value) => arr2.includes(value));
 }
 
 // Example usage:
-const result = cases(
-  {
-    model: "Continental GT",
-    steer: { model: "HANKOOK", size: 30 },
-  },
-  "model"
-);
-console.log(result); // 2
+const array1 = [8, 9, 0];
+const array2 = [9, 5, 7];
+const find = unique(array1, array2);
+console.log(find); // 9 ni qaytaradi
