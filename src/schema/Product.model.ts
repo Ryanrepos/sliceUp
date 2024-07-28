@@ -1,63 +1,70 @@
 import mongoose, { Schema } from "mongoose";
-import { ProductCollection, ProductSize, ProductStatus, ProductVolume } from "../libs/enums/product.enum";
+import {
+  ProductCollection,
+  ProductSize,
+  ProductStatus,
+  ProductVolume,
+} from "../libs/enums/product.enum";
 
-const productSchema = new Schema({
-
+const productSchema = new Schema(
+  {
     productStatus: {
-        type: String,
-        enum: ProductStatus,
-        default: ProductStatus.PAUSE,
+      type: String,
+      enum: ProductStatus,
+      default: ProductStatus.PAUSE,
     },
 
     productCollection: {
-        type: String,
-        enum: ProductCollection,
-        required: true,
+      type: String,
+      enum: ProductCollection,
+      required: true,
     },
 
     productName: {
-        type: String,
-        required: true,
+      type: String,
+      required: true,
     },
 
     productPrice: {
-        type: Number,
-        required: true,
+      type: Number,
+      required: true,
     },
 
     productLeftCount: {
-        type: Number,
-        required: true,
+      type: Number,
+      required: true,
     },
 
     productSize: {
-        type: String,
-        enum: ProductSize,
-        default: ProductSize.NORMAL,
+      type: String,
+      enum: ProductSize,
+      default: ProductSize.NORMAL,
     },
 
     productVolume: {
-        type: Number,
-        enum: ProductVolume,
-        default: ProductVolume.ONE,
+      type: Number,
+      enum: ProductVolume,
+      default: ProductVolume.ONE,
     },
 
     productDesc: {
-        type: String,
+      type: String,
     },
 
     productImages: {
-        type: [String],
-        default: [],
+      type: [String],
+      default: [],
     },
 
     productViews: {
-        type: Number,
-        default: 0,
+      type: Number,
+      default: 0,
     },
-
-},
-    { timestamps: true }  // timestaps - database da createdAt va updatedAt ma'lumotlarni qo'yib beradi.
+  },
+  { timestamps: true } // timestaps - database da createdAt va updatedAt ma'lumotlarni qo'yib beradi.
 );
-productSchema.index({ productName: 1, productSize: 1, productVolume: 1 }, { unique: true });
+productSchema.index(
+  { productName: 1, productSize: 1, productVolume: 1 },
+  { unique: true }
+);
 export default mongoose.model("Product", productSchema);

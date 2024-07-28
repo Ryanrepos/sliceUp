@@ -33,6 +33,7 @@ class ProductService {
     if (inquiry.search) {
       match.productName = { $regex: new RegExp(inquiry.search, "i") };
     }
+    // sort object to identify sorting order of result
     const sort: T =
       inquiry.order === "productPrice"
         ? { [inquiry.order]: 1 }
