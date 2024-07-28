@@ -7,7 +7,7 @@ const orderSchema = new Schema(
       type: Number,
       required: true,
     },
-    orderNumber: {
+    orderDelivery: {
       type: Number,
       required: true,
     },
@@ -25,4 +25,4 @@ const orderSchema = new Schema(
   { timestamps: true }
 );
 
-export default mongoose.model("Order", orderSchema);
+export default mongoose.model("Order", orderSchema); // connecting mongodb database
