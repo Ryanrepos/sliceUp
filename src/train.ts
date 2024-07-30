@@ -358,8 +358,18 @@ GraphQL Api
 
 // Z - TASK
 
-function find(array: number[]): number {
-  return array.reduce((sum, num) => (num % 2 === 0 ? sum + num : sum), 0);
+// function find(array: number[]): number {
+//   return array.reduce((sum, num) => (num % 2 === 0 ? sum + num : sum), 0);
+// }
+
+// console.log(find([1, 2, 3, 4, 5, 6, 7, 8, 88])); // 108
+
+// ZB-TASK
+
+function randomRaqam(min: number, max: number): number {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-console.log(find([1, 2, 3, 4, 5, 6, 7, 8, 88])); // 108
+console.log(randomRaqam(30, 50));  // orasidan ixtiyoriy sonni qaytaradi.
+
+

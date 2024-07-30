@@ -26,3 +26,4 @@ const orderSchema = new Schema(
 );
 
 export default mongoose.model("Order", orderSchema); // connecting mongodb database
+// "Order" is written as mongodb collection name

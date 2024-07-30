@@ -2,9 +2,9 @@ import { ExtendedRequest } from "../libs/types/member";
 import { T } from "../libs/types/common";
 import Errors, { HttpCode, Message } from "../libs/Errors";
 import { Response } from "express";
-import OrderService from "../model/order.service";
 import { OrderInquiry, OrderUpdateInput } from "../libs/types/order";
 import { OrderStatus } from "../libs/enums/order.enum";
+import OrderService from "../model/order.service";
 
 const orderService = new OrderService();
 const orderController: T = {};
