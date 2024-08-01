@@ -366,10 +366,18 @@ GraphQL Api
 
 // ZB-TASK
 
-function randomRaqam(min: number, max: number): number {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
+// function randomRaqam(min: number, max: number): number {
+//   return Math.floor(Math.random() * (max - min + 1)) + min;
+// }
+
+// console.log(randomRaqam(30, 50));  // orasidan ixtiyoriy sonni qaytaradi.
+
+// ZC - TASK
+
+function convertCelToFah(celsius: number): number {
+  return (celsius * 9) / 5 + 32;
 }
 
-console.log(randomRaqam(30, 50));  // orasidan ixtiyoriy sonni qaytaradi.
-
-
+console.log(convertCelToFah(0)); // 32
+console.log(convertCelToFah(10)); // 50
+console.log(convertCelToFah(100)); // 212
