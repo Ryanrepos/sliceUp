@@ -374,10 +374,26 @@ GraphQL Api
 
 // ZC - TASK
 
-function convertCelToFah(celsius: number): number {
-  return (celsius * 9) / 5 + 32;
+// function convertCelToFah(celsius: number): number {
+//   return (celsius * 9) / 5 + 32;
+// }
+
+// console.log(convertCelToFah(0)); // 32
+// console.log(convertCelToFah(10)); // 50
+// console.log(convertCelToFah(100)); // 212
+
+// ZD - TASK
+
+function updateNum(target: number, arr: number[], newValue: number): number[] {
+  return arr.reduce((acc, num) => {
+    if (num === target && !acc.replaced) {
+      acc.result.push(newValue);
+      acc.replaced = true;
+    } else {
+      acc.result.push(num);
+    }
+    return acc;
+  }, { result: [], replaced: false } as { result: number[], replaced: boolean }).result;
 }
 
-console.log(convertCelToFah(0)); // 32
-console.log(convertCelToFah(10)); // 50
-console.log(convertCelToFah(100)); // 212
+console.log(updateNum(10, [45, 75, 33, 2], 99)); // 45, 75, 33, 2
