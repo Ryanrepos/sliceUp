@@ -384,16 +384,29 @@ GraphQL Api
 
 // ZD - TASK
 
-function updateNum(target: number, arr: number[], newValue: number): number[] {
-  return arr.reduce((acc, num) => {
-    if (num === target && !acc.replaced) {
-      acc.result.push(newValue);
-      acc.replaced = true;
-    } else {
-      acc.result.push(num);
-    }
-    return acc;
-  }, { result: [], replaced: false } as { result: number[], replaced: boolean }).result;
+// function updateNum(target: number, arr: number[], newValue: number): number[] {
+//   return arr.reduce((acc, num) => {
+//     if (num === target && !acc.replaced) {
+//       acc.result.push(newValue);
+//       acc.replaced = true;
+//     } else {
+//       acc.result.push(num);
+//     }
+//     return acc;
+//   }, { result: [], replaced: false } as { result: number[], replaced: boolean }).result;
+// }
+
+// console.log(updateNum(10, [45, 75, 33, 2], 99)); // 45, 75, 33, 2
+
+// ZE - TASK
+
+function removingDup(input: string): string {
+  return input
+    .split('')
+    .filter((char, index, self) => self.indexOf(char) === index)
+    .join('');
 }
 
-console.log(updateNum(10, [45, 75, 33, 2], 99)); // 45, 75, 33, 2
+console.log(removingDup('Ryaann')); 
+console.log(removingDup('Engineerr'));  
+
