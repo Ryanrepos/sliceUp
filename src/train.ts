@@ -400,13 +400,30 @@ GraphQL Api
 
 // ZE - TASK
 
-function removingDup(input: string): string {
-  return input
-    .split('')
-    .filter((char, index, self) => self.indexOf(char) === index)
-    .join('');
+// function removingDup(input: string): string {
+//   return input
+//     .split('')
+//     .filter((char, index, self) => self.indexOf(char) === index)
+//     .join('');
+// }
+
+// console.log(removingDup('Ryaann')); 
+// console.log(removingDup('Engineerr'));  
+
+// ZF - TASK
+
+function boshHarflarBilan(str: string): string {
+
+    return str.split(' ').map(word => {
+
+        if (word.length > 2) {
+            return word.charAt(0).toUpperCase() + word.slice(1);
+        }
+
+        return word;
+    }).join(' '); 
 }
 
-console.log(removingDup('Ryaann')); 
-console.log(removingDup('Engineerr'));  
+console.log(boshHarflarBilan("I want to be fullStack engineer!"));  // I Want to be FullStack Engineer!
+
 
