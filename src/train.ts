@@ -412,18 +412,31 @@ GraphQL Api
 
 // ZF - TASK
 
-function boshHarflarBilan(str: string): string {
+// function boshHarflarBilan(str: string): string {
 
-    return str.split(' ').map(word => {
+//     return str.split(' ').map(word => {
 
-        if (word.length > 2) {
-            return word.charAt(0).toUpperCase() + word.slice(1);
-        }
+//         if (word.length > 2) {
+//             return word.charAt(0).toUpperCase() + word.slice(1);
+//         }
 
-        return word;
-    }).join(' '); 
-}
+//         return word;
+//     }).join(' '); 
+// }
 
-console.log(boshHarflarBilan("I want to be fullStack engineer!"));  // I Want to be FullStack Engineer!
+// console.log(boshHarflarBilan("I want to be fullStack engineer!"));  // I Want to be FullStack Engineer!
 
+// ZG - TASK 
 
+function toSnakeCase(input: string): string {
+    return input
+      .toLowerCase() 
+      .replace(/[^a-z0-9\s]/g, '')
+      .replace(/\s+/g, '_');
+  }
+  
+  const result = toSnakeCase('Learning programming is not hard, just understand the logic');
+  console.log(result); 
+  // learning_programming_is_not_hard_just_understand_the_logic
+  
+  
