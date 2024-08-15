@@ -428,15 +428,49 @@ GraphQL Api
 
 // ZG - TASK 
 
-function toSnakeCase(input: string): string {
-    return input
-      .toLowerCase() 
-      .replace(/[^a-z0-9\s]/g, '')
-      .replace(/\s+/g, '_');
-  }
+// function toSnakeCase(input: string): string {
+//     return input
+//       .toLowerCase() 
+//       .replace(/[^a-z0-9\s]/g, '')
+//       .replace(/\s+/g, '_');
+//   }
   
-  const result = toSnakeCase('Learning programming is not hard, just understand the logic');
-  console.log(result); 
+//   const result = toSnakeCase('Learning programming is not hard, just understand the logic');
+//   console.log(result); 
   // learning_programming_is_not_hard_just_understand_the_logic
   
   
+// ZH-TASK:
+
+function missedNums(list: number[]): number[] {
+    const maxNum = Math.max(...list);
+    const present = new Array(maxNum + 1).fill(false);
+    const result: number[] = [];
+
+    for (const num of list) {
+        present[num] = true;
+    }
+
+    for (let i = 1; i <= maxNum; i++) {
+        if (!present[i]) {
+            result.push(i);
+        }
+    }
+
+    return result;
+}
+
+const numbers = [1, 22, 33];
+console.log(missedNums(numbers)); 
+
+
+/*
+
+[
+   2,  3,  4,  5,  6,  7,  8,  9, 10,
+  11, 12, 13, 14, 15, 16, 17, 18, 19,
+  20, 21, 23, 24, 25, 26, 27, 28, 29,
+  30, 31, 32
+]
+
+*/
