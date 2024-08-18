@@ -442,26 +442,26 @@ GraphQL Api
   
 // ZH-TASK:
 
-function missedNums(list: number[]): number[] {
-    const maxNum = Math.max(...list);
-    const present = new Array(maxNum + 1).fill(false);
-    const result: number[] = [];
+// function missedNums(list: number[]): number[] {
+//     const maxNum = Math.max(...list);
+//     const present = new Array(maxNum + 1).fill(false);
+//     const result: number[] = [];
 
-    for (const num of list) {
-        present[num] = true;
-    }
+//     for (const num of list) {
+//         present[num] = true;
+//     }
 
-    for (let i = 1; i <= maxNum; i++) {
-        if (!present[i]) {
-            result.push(i);
-        }
-    }
+//     for (let i = 1; i <= maxNum; i++) {
+//         if (!present[i]) {
+//             result.push(i);
+//         }
+//     }
 
-    return result;
-}
+//     return result;
+// }
 
-const numbers = [1, 22, 33];
-console.log(missedNums(numbers)); 
+// const numbers = [1, 22, 33];
+// console.log(missedNums(numbers)); 
 
 
 /*
@@ -474,3 +474,13 @@ console.log(missedNums(numbers));
 ]
 
 */
+
+// ZI - TASK
+
+// Shunday function yozing, u function ishga tushgandan 3 soniyadan keyin "Hello World" ni qaytarsin.
+// MASALAN: delayHelloWorld("Hello World") return "Hello World"
+
+function delayHelloWorld () {
+    console.log(" 3 second kechga qol")
+}
+setTimeout(delayHelloWorld, 3000);
