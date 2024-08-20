@@ -480,7 +480,30 @@ GraphQL Api
 // Shunday function yozing, u function ishga tushgandan 3 soniyadan keyin "Hello World" ni qaytarsin.
 // MASALAN: delayHelloWorld("Hello World") return "Hello World"
 
-function delayHelloWorld () {
-    console.log(" 3 second kechga qol")
+// function delayHelloWorld () {
+//     console.log(" 3 second kechga qol")
+// }
+// setTimeout(delayHelloWorld, 3000);
+
+// ZJ-TASK:
+
+// Shunday function yozing, u berilgan arrayni ichidagi numberlarni qiymatini hisoblab qaytarsin.
+// MASALAN: reduceNestedArray([1, [1, 2, [4]]]) return 8
+
+// @MITASK
+
+function calculate(arr: any[]): number[] {
+
+  const arr1 = arr.flat(Infinity);
+
+  const sum = arr1.reduce((acc, num) => acc + num, 0);
+
+  return [sum];
 }
-setTimeout(delayHelloWorld, 3000);
+
+const nums = [1, 2, 3, 4, 0];
+const raqamlar = [2, [4, 4, [2, 4]]];
+
+console.log(calculate(nums)); 
+console.log(calculate(raqamlar)); 
+// 10 va 16
