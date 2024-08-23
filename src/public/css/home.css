@@ -1,65 +1,73 @@
 .home-container {
   position: relative;
-  width: auto;
-  height: auto;
+  width: 100%;
+  height: 100vh;
   min-height: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row; 
   align-items: center;
-  background: linear-gradient(-45deg, #110303f0, #dd6d04, #011c1afc, #7a6868);
+  justify-content: center;
+  background: #C75B7A;
 }
 
-.home-container a {
-  text-decoration: none;
-  color: #000000;
-}
-
-.home-container .nav-item a {
-  color: #e3c08d;
-}
-
-.home-container .nav-item a.disabled {
-  color: #898071;
-}
-
-.home-container .navigation-menu {
-  position: relative;
-  z-index: 10000;
-  color: #efefee;
+.home-container .dashboard {
+  display: flex;
+  flex-direction: column; 
+  justify-content: space-between;
+  align-items: center; 
+  background-color: #d77692;
+  width: 90%;
+  height: 90%;
+  padding: 20px;
+  border-radius: 20px;
   font-size: 40px;
   font-family: monospace;
+
+  box-shadow: 
+    0 4px 8px rgba(0, 0, 0, 0.1),   
+    0 12px 24px rgba(0, 0, 0, 0.2); 
 }
 
-.home-container .animation-frame {
-  position: relative;
+.home-container .dashboard .left-box {
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin-top: 55px;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 20px; 
 }
 
-.home-container .animation-wrapper {
+.home-container .dashboard .right-box {
+  margin: 20px 0 20px 50px; 
+  background-color: #d77692;
+}
+
+.home-container .dashboard .navigation-menu {
   position: relative;
-  width: 775px;
-  height: 775px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  z-index: 10000;
+  height: auto; 
+  background: #C75B7A;
+  border-radius: 20px;
+  font-size: 40px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin: 20px 0; 
+  box-shadow: 
+    0 4px 8px rgba(0, 0, 0, 0.1),   
+    0 12px 24px rgba(0, 0, 0, 0.2);
 }
 
-.home-container .sphere-animation {
-  position: relative;
-  width: 580px;
-  height: 580px;
+.home-container .dashboard .navigation-menu a {
+  color: black; 
+  text-decoration: none;
 }
 
-.home-container .sphere path {
-  fill: url(#sphereGradient);
-  stroke-width: 1px;
-  stroke: rgba(80, 80, 80, 0.35);
-  backface-visibility: hidden;
+.home-container .dashboard .home-line {
+  width: 250px;
+  height: 1px;
+  background-color: black;
+  margin: 30px auto;
 }
 
+/* Media query for stroke width adjustment */
 @media (min-width: 500px) {
   .sphere path {
     stroke-width: 0.4px;

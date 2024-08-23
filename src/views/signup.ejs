@@ -7,11 +7,11 @@
     <form onsubmit="return validateSignupForm()" action="/admin/signup" method="POST" enctype="multipart/form-data">
       <div class="signup-frame" style="width: 650px">
         <div class="signup-top">
-          <span>Signup</span>
-          <div>Go back <a href="/admin" style="color: #6440fb">Home</a></div>
-          <p>
+          <span class="signup-label">Signup</span>
+          <div class="goback-label">Go back <a href="/admin" style="color: #6440fb" class="home-label">Home</a></div>
+          <p class="already-label">
             Already signed up?
-            <a href="/admin/login" style="color: #6440fb">Login</a>
+            <a href="/admin/login" style="color: #6440fb" class="login-label">Login</a>
           </p>
         </div>
 
@@ -62,7 +62,7 @@
 
         <div class="signup-input-frame">
           <div class="media-frame">
-            <img class="upload-img-frame" src="/img/default.jpeg" />
+            <img class="upload-img-frame" src="/img/upld.jpeg" />
             <div class="upload-container">
               <span class="media-text">Product image</span>
               <div

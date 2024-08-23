@@ -1,10 +1,6 @@
 import mongoose, { Schema } from "mongoose";
 import { MemberType, MemberStatus } from "../libs/enums/member.enum";
 
-// ** Schema ni 2 xil usulda qurish mumkin:
-// 1. Schema first => schema orqali 
-// 2. Code first => code orqali
-
 const memberSchema = new Schema({
     memberType: {
         type: String,

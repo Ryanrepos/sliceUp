@@ -1,7 +1,7 @@
 {
-  "name": "burak",
+  "name": "sliceup",
   "version": "1.0.0",
-  "description": "This is burak project backend",
+  "description": "This is SliceUp project backend",
   "main": "src/server.js",
   "scripts": {
     "start": "ts-node src/server.ts",

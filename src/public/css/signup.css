@@ -6,7 +6,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background: #C75B7A;
   animation: gradient 15s ease infinite;
   -webkit-animation: gradient 15s ease infinite;
   background-size: 200% 200%;
@@ -19,13 +19,25 @@
 
 .signup-container .signup-frame {
   position: relative;
-  width: 420px;
+  width: 600px;
   height: auto;
   display: flex;
   flex-direction: column;
-  border-radius: 10px;
-  background: #ffffff;
+  align-items: center;
+  border-radius: 20px;
+  background: #d77692;
   padding: 25px;
+  box-shadow: 
+    0 4px 8px rgba(0, 0, 0, 0.1),   
+    0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.signup-container .signup-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: normal;
+  gap: 50px;
 }
 
 .signup-container .signup-frame .sign-input-frame {
@@ -62,7 +74,7 @@
   height: 55px;
   background: #f6f5f5;
   border: 1px solid #dddddd;
-  border-radius: 8px;
+  border-radius: 20px;
 }
 
 .signup-container .media-frame {
@@ -113,6 +125,7 @@
   font-size: 16px;
   line-height: 18px;
   color: #140342;
+  
 }
 
 .signup-container .file-box input[type="file"] {
@@ -142,6 +155,7 @@
   font-size: 15px;
   line-height: 26px;
   color: #ffffff;
+  
 }
 
 .signup-container .file-box .upload-name {
@@ -162,30 +176,15 @@
   font-weight: 400;
   font-size: 15px;
   line-height: 26px;
-  color: #4f547b;
+  color: black;
 }
 
-/* Background animation */
-@-webkit-keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+.signup-container .signup-btn {
+  background: #C75B7A;
+  width: 400px;
+  border-radius: 20px;
+  box-shadow: 
+    0 4px 8px rgba(0, 0, 0, 0.1),   
+    0 12px 24px rgba(0, 0, 0, 0.2);
 }
 
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}

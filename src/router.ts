@@ -5,8 +5,6 @@ import uploader from "./libs/utilis/uploader";
 import productController from "./controller/product.controller";
 import orderController from "./controller/order.controller";
 
-// React App
-
 // Member
 router.get("/member/restaurant", memberController.getRestaurant);
 router.post("/member/login", memberController.login);

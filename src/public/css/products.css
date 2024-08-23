@@ -1,12 +1,29 @@
+
+/* General Container Styles */
 .products-container {
   position: relative;
-  width: auto;
-  height: auto;
-  min-height: 100%;
+  width: 100%;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: linear-gradient(-45deg, #110303bf, #e37813, #011c1aba, #968383);
+  background: #C75B7A;
+  padding: 30px; 
+}
+
+/* Navigation Menu Styles */
+.products-container .navigation-menu {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: #d77692;
+  border-radius: 20px;
+  padding: 10px 0;
+  color: #efefee;
+  font-size: 20px;
+  font-family: monospace;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
 .products-container a {
@@ -22,39 +39,41 @@
   color: #898071;
 }
 
-.products-container .navigation-menu {
-  position: absolute;
-  z-index: 10000;
-  top: 1%;
-  color: #efefee;
-  font-size: 40px;
-  font-family: monospace;
+.products-container .nav-item a:hover,
+.products-container .nav-item a:active {
+  background: #C75B7A; 
+  border-radius: 10px; 
+  color: #ffffff; 
 }
 
 .products-container .restaurant-menu-frame {
   position: relative;
   padding-bottom: 80px;
   width: 100%;
+  margin-top: 15px;
   height: auto;
-
+  border-radius: 20px;
+  background: #d77692;
   display: flex;
   flex-direction: column;
   align-items: center;
+
 }
 
 .products-container .restaurant-menu-frame .board {
   position: relative;
-  margin-top: 100px;
+  margin-top: 30px;
   width: 1320px;
   height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-radius: 20px;
 }
 
 .products-container .board .dishes-table {
   position: relative;
-  width: 100%;
+  width: 80%;
   height: auto;
   margin-top: 30px;
   display: flex;
@@ -65,12 +84,12 @@
 .products-container .board .dish-container {
   position: relative;
   margin-top: 20px;
-  width: 100%;
+  width: 80%;
   height: auto;
-
   display: none;
   flex-direction: column;
   align-items: center;
+
 }
 
 .products-container .new-dish-txt {
@@ -79,7 +98,9 @@
   font-weight: 400;
   font-size: 30px;
   line-height: 25px;
-  color: #ffffff;
+  color: #e3c08d;
+  font-size: 40px;
+  font-family: monospace;
 }
 
 .products-container .long-input {
@@ -116,6 +137,7 @@
   font-size: 15px;
   line-height: 26px;
   color: #4f547b;
+
 }
 
 .products-container .long-input textarea {
@@ -298,12 +320,14 @@
   font-size: 15px;
   line-height: 26px;
   color: #4f547b;
+  background: #C75B7A;
 }
 
 .products-container table td,
 table th {
   text-align: center;
   vertical-align: middle;
+  background: #C75B7A;
 }
 
 .products-container .switch {
@@ -364,3 +388,4 @@ table th {
 .products-container .slider.round:before {
   border-radius: 50%;
 }
+
