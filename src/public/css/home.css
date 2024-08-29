@@ -15,8 +15,9 @@
   flex-direction: column; 
   justify-content: space-between;
   align-items: center; 
+  gap: 30px;
   background-color: #d77692;
-  width: 90%;
+  width: 80%;
   height: 90%;
   padding: 20px;
   border-radius: 20px;
@@ -26,6 +27,28 @@
   box-shadow: 
     0 4px 8px rgba(0, 0, 0, 0.1),   
     0 12px 24px rgba(0, 0, 0, 0.2); 
+}
+
+.home-container .dashboard .animated-text {
+  display: inline-block;
+  font-size: 24px;
+  overflow: hidden;
+  border-right: 2px solid;
+  white-space: nowrap;
+  animation: typing 3s steps(22), blink 0.75s step-end infinite alternate;
+  animation-delay: 0s; /* Start immediately */
+  animation-duration: 6s; /* Loop every 5 seconds */
+  animation-iteration-count: infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  from { border-color: transparent; }
+  to { border-color: black; }
 }
 
 .home-container .dashboard .left-box {
@@ -39,6 +62,12 @@
 .home-container .dashboard .right-box {
   margin: 20px 0 20px 50px; 
   background-color: #d77692;
+}
+
+.home-container .dashboard .pizza {
+  width: 300px;
+  height: 300px;
+  margin-bottom: 40px;
 }
 
 .home-container .dashboard .navigation-menu {
